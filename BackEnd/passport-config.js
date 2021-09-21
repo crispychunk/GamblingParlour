@@ -6,7 +6,7 @@ function init(passport,User) {
     console.log("Initiating!!!")
     const authenticateUser = async (username,password,done) =>{
         //console.log(username)
-        var currUser;
+        let currUser;
         await User.findOne({username : username}).where('userInfo').then((user) => {
             //console.log(user)
             currUser = user

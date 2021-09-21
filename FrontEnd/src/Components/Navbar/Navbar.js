@@ -19,7 +19,7 @@ class NavBarPublic extends Component {
                 <Nav className="me-auto">
                     <Nav.Link href = "/dashboard">HOME</Nav.Link>
                     <Nav.Link href="/ticker">DAILY TICKER BETS</Nav.Link>
-                    <Nav.Link href="/about">ABOUT</Nav.Link>
+
 
                 </Nav>
                 <Nav className="pull-right">

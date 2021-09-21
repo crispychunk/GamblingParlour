@@ -6,6 +6,20 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Logo from './Logo.png'
 import axios from 'axios';
 class NavBarPrivate extends Component {
+
+    handleLogOut() {
+        axios.get('http://localhost:5000/logout',{withCredentials: true}).then(Response => {
+            if (Response.data.message == 'Success') {
+
+                window.location.href = "http://localhost:3000/"
+
+            }
+            else {
+                console.log("Failed to logout")
+            }
+        })
+    }
+
     render() {
         return (
             <Navbar bg = "dark" variant = "dark">
@@ -20,13 +34,13 @@ class NavBarPrivate extends Component {
                 <Nav className="me-auto">
                     <Nav.Link href = "/dashboard">HOME</Nav.Link>
                     <Nav.Link href="/ticker">DAILY TICKER BETS</Nav.Link>
-                    <Nav.Link href="/about">ABOUT</Nav.Link>
+
 
                 </Nav>
                 <Nav className="ml-auto">
                 <Nav.Link>{this.props.props.balance} tendies</Nav.Link>
                 <Nav.Link href = "/dashboard">{this.props.props.username}</Nav.Link>
-                <Nav.Link>Logout</Nav.Link>
+                <Nav.Link onClick={() => {this.handleLogOut()}}>Logout</Nav.Link>
                 <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                 
                 </Nav> 

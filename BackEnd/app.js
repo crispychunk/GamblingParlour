@@ -145,10 +145,10 @@ function checkAuthenticated(req, res, next) {
 //------------------------------------------------------------
 //Frontend register APi endpoints
 app.post("/registerTest", async (req, res) => {
-  await User.findOne({ email: req.body.email }).where('userInfo').then(async (email) => {
+  await User.findOne({ username: req.body.username }).where('userInfo').then(async (username ) => {
     //console.log(user)
-    if (email != null) {
-      res.send({ error: false, message: 'Email already in use' });
+    if (username != null) {
+      res.send({ error: false, message: 'Username already in use' });
     }
     else {
       try {
@@ -571,7 +571,9 @@ app.post('/cancel_openOrder', checkAuthenticated, (req, res) => {
 })
 
 app.get('/logout', function(req, res){
+
   req.logout();
+  res.send({ error: false, message: 'Success' })
 
 });
 
