@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## IMPORTANT
+Note for full functionality of this, you will need your own secret session and MongoDB api key.
+
+
 ## Available Scripts
 
 In the project directory, you can run:
