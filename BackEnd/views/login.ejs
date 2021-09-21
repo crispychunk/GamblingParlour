@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WallStreet Parlor</title>
+    <link rel="stylesheet" type = "text/css" href="css/style.css">
+</head>
+<body>
+    <form action="/login" method = "POST">
+    
+    <h1>LOGIN:</h1>
+    <div class = 'regular'>
+        <label for= "username">Username</label>
+        <input type="username" id = "username" name="username" required>
+    </div>
+    <div class = 'regular'>
+        <label for= "password">Password</label>
+        <input type="password" id = "password" name="password" required>
+    </div>
+    <% if (messages.error) { %>
+        <%= messages.error %>
+      <% } %>
+      <div class = 'regular'>
+        <button type="submit" id = "submit">Login</button>
+      </div>
+    </form>
+    <a href="/register">Register</a>
+</body>
+
+</html>

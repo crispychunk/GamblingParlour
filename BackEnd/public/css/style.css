@@ -1,0 +1,17 @@
+body {
+    color:rgb(0, 0, 0);
+    background-color: #ffffff;
+}
+.Info {
+    background-color: rgb(56, 54, 54);
+    color: white;
+    padding: 10px;
+    
+}
+.container{
+    width: 99%;
+    margin: auto;
+}
+.regular{
+    color: black;
+}
