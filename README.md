@@ -1,5 +1,5 @@
 # GamblingParlour
-                <h1 class = "subTitle">What is it?</h1>
+                <h1>What is it?</h1>
                 <hr></hr>
                 <p>Gambling Parlour is a website that allow users to gamble using a fake currency known as "tendies". Currently, only Daily Ticker Bets is operationals but there many many more games to be implemented in the future.
                     Some currently in development include Roulette, and a Gacha Simulator. This website was made as a personal project for me to develop my skills in Javascript, React and Databases. 
