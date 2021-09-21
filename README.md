@@ -19,7 +19,7 @@ For Frontend development, this project uses ReactJS as its framework. Quite Fran
 ![image](https://user-images.githubusercontent.com/56182053/134259770-aa3ce9d3-4323-4d2a-aa6a-011c8072c49b.png)
 
 ## Dashboard
-![image](https://user-images.githubusercontent.com/56182053/134259794-f07681a2-826d-418a-9170-7b5c244174e1.png)
+![image](https://user-images.githubusercontent.com/56182053/134259909-6a57bcbb-900b-4d35-89e0-9de10064def8.png)
 
 ## Tickerlist
 ![image](https://user-images.githubusercontent.com/56182053/134259812-536623e5-6bf6-4f44-86c9-ed972183de02.png)
