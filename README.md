@@ -11,15 +11,15 @@ For backend development, this project uses ExpressJS as its framework to do a lo
 
 For Frontend development, this project uses ReactJS as its framework. Quite Frankly, the reason for this was I really wanted to learn a popular framework that others were using. Then again, it was really great in making coding easier as React seperates my pages into many components which made it easily reusable and easier to code.
 
-## Example Pictures:
-# Home Page
+# Example Pictures:
+## Home Page
 ![image](https://user-images.githubusercontent.com/56182053/134259692-3ceb030f-fcf0-446e-91dc-2a8dd292450c.png)
 
-# Login 
+## Login 
 ![image](https://user-images.githubusercontent.com/56182053/134259770-aa3ce9d3-4323-4d2a-aa6a-011c8072c49b.png)
 
-# Dashboard
+## Dashboard
 ![image](https://user-images.githubusercontent.com/56182053/134259794-f07681a2-826d-418a-9170-7b5c244174e1.png)
 
-# Tickerlist
+## Tickerlist
 ![image](https://user-images.githubusercontent.com/56182053/134259812-536623e5-6bf6-4f44-86c9-ed972183de02.png)
