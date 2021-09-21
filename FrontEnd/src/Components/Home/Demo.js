@@ -34,7 +34,7 @@ class DemoTicker extends Component {
 
                 <p>For Frontend development, this project uses ReactJS as its framework. Quite Frankly, the reason for this was I really wanted to learn a popular framework that others were using. Then again, it was really great in making coding easier as React seperates
                 my pages into many components which made it easily reusable and easier to code.</p>
-                <h1 className="About me">Technology used</h1>
+                <h1 className="subTitle">About me</h1>
                 <hr></hr>
                     My name is Crispin. I am currently a 3rd year Computer Science student from UBC. I am sole creator of this website and I plan to continuously work on this site so if you like it stay tune! Some of my hobbies including trading in the stock market (Only stocks, options are too scary) and coding in my free time.
                 Some of my interests are in Cloud technology and Big Data. If you would like to see some of my other projects here is my github link: <a href="https://github.com/crispychunk">Github Link</a>
