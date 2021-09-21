@@ -1,0 +1,15 @@
+@media all and (min-width: 480px) {
+    .Login {
+      padding: 60px 0;
+      max-width: 800px;
+    }
+  
+    .login-header {
+      margin: 0 auto;
+      text-align: center;
+      font-size:xx-large;
+    }
+    .login-button {
+        padding: 600px;
+    }
+  }

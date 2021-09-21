@@ -1,0 +1,11 @@
+.customHeight {
+    min-height: 200px;
+}
+
+.overFlow {
+    overflow-y: scroll;
+    max-height: 200px;
+}
+.footer{
+    text-align: center
+}
