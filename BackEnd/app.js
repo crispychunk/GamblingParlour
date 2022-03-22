@@ -22,7 +22,7 @@ import userManagement from "./userManagement.js";
 import tickerManagement from "./tickerManagement.js";
 
 //---------------------------------------------------------------------------------
-// Setup
+// SetupFEFF
 
 // Read environmental configs
 DotEnv.config()
