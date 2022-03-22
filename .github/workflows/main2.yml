@@ -24,6 +24,18 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      
+      
+      
+      - name: Parse Jira Keys from Commit
+        id: jira_keys
+        if: always()
+        uses: HighwayThree/jira-extract-issue-keys@master
+        with:
+          is-pull-request: ${{ github.event_name == 'pull_request' }}
+          parse-all-commits: ${{ github.event_name == 'push' }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
