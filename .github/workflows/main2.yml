@@ -43,6 +43,7 @@ jobs:
       # Runs Jira deployment event
       - name: Jira Upload Deployment Info
         uses: HighwayThree/jira-upload-build-info@master
+        if: steps.jira_keys.outputs.jira-keys != ''
         with:
           client-id: '${{ secrets.CLIENT_ID }}'
           client-secret: '${{ secrets.CLIENT_SECRET }}'
