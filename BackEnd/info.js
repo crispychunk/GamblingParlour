@@ -2,7 +2,7 @@ const test =
 [
     {
         "id" : 1,
-        "name": "Lenny"
+        "name": "LennWWWy"
     }
 ]
 export default test;
