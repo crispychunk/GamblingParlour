@@ -15,10 +15,9 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  build_and_test:
+  deployment:
     runs-on: ubuntu-latest
     steps:
-      deployment: test
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it TEST
     - uses: actions/checkout@v1
     - name: Build and Test
