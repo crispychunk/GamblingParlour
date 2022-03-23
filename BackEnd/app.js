@@ -22,9 +22,9 @@ import userManagement from "./userManagement.js";
 import tickerManagement from "./tickerManagement.js";
 
 //---------------------------------------------------------------------------------
-// SetupFEFF
+// SetupFEFFdd 
 
-// Read environmental configs
+// Read environmental configsfd
 DotEnv.config()
 // Instantiate server
 const app = Express();
