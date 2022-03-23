@@ -20,7 +20,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it TEST
     - uses: actions/checkout@v1
-    - name: Build and Test
+    - name: Deploy
       run: |
         echo "Build and Test as asdfsdf asdf asdfs sadfsd asdfsdff bbccccdddd asdfd asdf yyyyy asd asdf   asdfdf "
         echo "BUILD_STATE=successful" >> $GITHUB_ENV
