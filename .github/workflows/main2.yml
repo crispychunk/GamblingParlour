@@ -18,6 +18,7 @@ jobs:
   build_and_test:
     runs-on: ubuntu-latest
     steps:
+      deployment: test
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it TEST
     - uses: actions/checkout@v1
     - name: Build and Test
