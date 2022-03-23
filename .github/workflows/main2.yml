@@ -24,28 +24,45 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it TEST
       - uses: actions/checkout@v2
-      
-      
-      
-      - name: Parse Jira Keys from Commit
-        id: jira_keys
-        if: always()
-        uses: HighwayThree/jira-extract-issue-keys@master
-        with:
-          is-pull-request: ${{ github.event_name == 'pull_request' }}
-          parse-all-commits: ${{ github.event_name == 'push' }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
+      - name: Build and Test
+            shell: bash
+            run: |
+              echo "Build and Test as asdfsdf asdf asdfs sadfsd asdfsdff bbccccdddd asdfd asdf yyyyy asd asdf   asdfdf "
+              echo "BUILD_STATE=successful" >> $GITHUB_ENV
+          - name: Failed Build
+            if: failure()
+            run: echo "BUILD_STATE=failed" >> $GITHUB_ENV
+          - name: Parse Jira Keys from Commit
+            id: jira_keys
+            if: always()
+            uses: HighwayThree/jira-extract-issue-keys@master
+            with:
+              is-pull-request: ${{ github.event_name == 'pull_request' }}
+              parse-all-commits: ${{ github.event_name == 'push' }}
+            env:
+              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          - name: Push Build Info to Jira
+            if: steps.jira_keys.outputs.jira-keys != ''
+            id: push_build_info_to_jira
+            uses: HighwayThree/jira-upload-build-info@master
+            with:
+              cloud-id: '${{ secrets.CLOUD_ID }}'
+              client-id: '${{ secrets.CLIENT_ID }}'
+              client-secret: '${{ secrets.CLIENT_SECRET }}'
+              pipeline-id: '${{ github.repository }} ${{ github.workflow }}'
+              build-number: ${{ github.run_number }}
+              build-display-name: 'Workflow: ${{ github.workflow }} (#${{ github.run_number }})'
+              build-state: "${{ env.BUILD_STATE }}"
+              build-url: '${{github.event.repository.url}}/actions/runs/${{github.run_id}}'
+              update-sequence-number: '${{ github.run_id }}'
+              last-updated: '${{github.event.head_commit.timestamp}}'
+              issue-keys: "${{ steps.jira_keys.outputs.jira-keys }}"
+              commit-id: '${{ github.sha }}'
+              repo-url: '${{ github.event.repository.url }}'
+              build-ref-url: '${{ github.event.repository.url }}/actions/runs/${{ github.run_id }}'
+          - name: Confirm Jira Build Output
+            if: success()
+            run: |
+              echo "Jira Upload Build Info response: ${{ steps.push_build_info_to_jira.outputs.response }}"
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-      # Runs Jira deployment event
-      - name: Jira Upload Deployment Info
-        uses: HighwayThree/jira-upload-build-info@master
-        if: steps.jira_keys.outputs.jira-keys != ''
-        with:
-          client-id: '${{ secrets.CLIENT_ID }}'
-          client-secret: '${{ secrets.CLIENT_SECRET }}'
-          cloud-instance-base-url: '${{ secrets.CLOUD_INSTANCE_BASE_URL }}'
-          issue-keys: "${{ steps.jira_keys.outputs.jira-keys }}"
