@@ -26,13 +26,9 @@ jobs:
       - uses: actions/checkout@v2
         
       - name: Build and Test
-            shell: bash
             run: |
               echo "Build and Test as asdfsdf asdf asdfs sadfsd asdfsdff bbccccdddd asdfd asdf yyyyy asd asdf   asdfdf "
               echo "BUILD_STATE=successful" >> $GITHUB_ENV
-          - name: Failed Build
-            if: failure()
-            run: echo "BUILD_STATE=failed" >> $GITHUB_ENV
           - name: Parse Jira Keys from Commit
             id: jira_keys
             if: always()
