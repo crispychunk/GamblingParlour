@@ -1,7 +1,7 @@
 /*
  Imports all required dependencies are imported here
  */
-
+// SUP TT
 //Framework
 import Express from "express";
 import Cors from "cors"
@@ -22,7 +22,7 @@ import userManagement from "./userManagement.js";
 import tickerManagement from "./tickerManagement.js";
 
 //---------------------------------------------------------------------------------
-// Setup
+// SetupFEFF
 
 // Read environmental configs
 DotEnv.config()
